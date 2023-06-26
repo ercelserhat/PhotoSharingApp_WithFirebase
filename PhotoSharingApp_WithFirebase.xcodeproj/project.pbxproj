@@ -13,6 +13,7 @@
 		7A1199652A49C63A001F19A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1199632A49C63A001F19A5 /* Main.storyboard */; };
 		7A1199672A49C63B001F19A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A1199662A49C63B001F19A5 /* Assets.xcassets */; };
 		7A11996A2A49C63B001F19A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A1199682A49C63B001F19A5 /* LaunchScreen.storyboard */; };
+		7A1199722A49C641001F19A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A1199712A49C641001F19A5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7A1199662A49C63B001F19A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A1199692A49C63B001F19A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A11996B2A49C63B001F19A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A1199712A49C641001F19A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				7A1199662A49C63B001F19A5 /* Assets.xcassets */,
 				7A1199682A49C63B001F19A5 /* LaunchScreen.storyboard */,
 				7A11996B2A49C63B001F19A5 /* Info.plist */,
+				7A1199712A49C641001F19A5 /* GoogleService-Info.plist */,
 			);
 			path = PhotoSharingApp_WithFirebase;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A11996A2A49C63B001F19A5 /* LaunchScreen.storyboard in Resources */,
+				7A1199722A49C641001F19A5 /* GoogleService-Info.plist in Resources */,
 				7A1199672A49C63B001F19A5 /* Assets.xcassets in Resources */,
 				7A1199652A49C63A001F19A5 /* Main.storyboard in Resources */,
 			);
