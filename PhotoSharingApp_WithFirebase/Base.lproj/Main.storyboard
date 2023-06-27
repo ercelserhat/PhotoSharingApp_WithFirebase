@@ -102,14 +102,56 @@
                     <view key="view" contentMode="scaleToFill" id="hsH-z4-MzY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gorselsec" translatesAutoresizingMaskIntoConstraints="NO" id="B79-Si-XUU">
+                                <rect key="frame" x="20" y="80" width="353" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="TOJ-P7-uh4"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yorum yazınız" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="caf-WS-xJA">
+                                <rect key="frame" x="20" y="360" width="353" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="giH-qZ-SwQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1v-W7-CMN">
+                                <rect key="frame" x="20" y="500" width="353" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Paylaş">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="uploadButonTiklandi:" destination="qcX-nD-F4q" eventType="touchUpInside" id="fYL-fb-cdt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nah-wb-esd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O1v-W7-CMN" firstAttribute="leading" secondItem="nah-wb-esd" secondAttribute="leading" constant="20" id="8Ya-Ht-u4j"/>
+                            <constraint firstItem="caf-WS-xJA" firstAttribute="leading" secondItem="nah-wb-esd" secondAttribute="leading" constant="20" id="BAY-bj-IuG"/>
+                            <constraint firstItem="B79-Si-XUU" firstAttribute="leading" secondItem="nah-wb-esd" secondAttribute="leading" constant="20" id="E9r-LZ-HtS"/>
+                            <constraint firstItem="B79-Si-XUU" firstAttribute="top" secondItem="nah-wb-esd" secondAttribute="top" constant="80" id="ICl-7r-lBm"/>
+                            <constraint firstItem="nah-wb-esd" firstAttribute="trailing" secondItem="caf-WS-xJA" secondAttribute="trailing" constant="20" id="JV2-tX-aLi"/>
+                            <constraint firstItem="nah-wb-esd" firstAttribute="trailing" secondItem="O1v-W7-CMN" secondAttribute="trailing" constant="20" id="e34-0E-bVs"/>
+                            <constraint firstItem="O1v-W7-CMN" firstAttribute="top" secondItem="caf-WS-xJA" secondAttribute="bottom" constant="100" id="e5y-rR-JQy"/>
+                            <constraint firstItem="nah-wb-esd" firstAttribute="trailing" secondItem="B79-Si-XUU" secondAttribute="trailing" constant="20" id="fxX-E5-PCW"/>
+                            <constraint firstItem="caf-WS-xJA" firstAttribute="top" secondItem="B79-Si-XUU" secondAttribute="bottom" constant="30" id="y6W-a2-U0f"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="square.and.arrow.up" catalog="system" id="uvK-U9-YhD"/>
+                    <connections>
+                        <outlet property="imageView" destination="B79-Si-XUU" id="ihw-lv-qAW"/>
+                        <outlet property="yorumTextField" destination="caf-WS-xJA" id="Bak-0V-fjv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAW-Za-rUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="281"/>
+            <point key="canvasLocation" x="1203.8167938931297" y="280.98591549295776"/>
         </scene>
         <!--Settings-->
         <scene sceneID="J9v-3U-4yn">
@@ -183,6 +225,7 @@
     </scenes>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="gorselsec" width="1366" height="768"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
