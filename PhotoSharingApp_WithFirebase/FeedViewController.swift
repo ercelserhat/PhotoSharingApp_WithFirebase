@@ -13,9 +13,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var tableView: UITableView!
     
-    var emailDizisi = [String]()
-    var yorumDizisi = [String]()
-    var gorselDizisi = [String]()
+    var postDizisi = [Post]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,20 +32,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print(error?.localizedDescription)
             }else{
                 if snapShot?.isEmpty != true && snapShot != nil{
-                    self.emailDizisi.removeAll(keepingCapacity: false)
-                    self.yorumDizisi.removeAll(keepingCapacity: false)
-                    self.gorselDizisi.removeAll(keepingCapacity: false)
+                    self.postDizisi.removeAll(keepingCapacity: false)
                     
                     for document in snapShot!.documents{
                         let documentId = document.documentID
                         if let gorselUrl = document.get("gorselurl") as? String{
-                            self.gorselDizisi.append(gorselUrl)
-                        }
-                        if let yorum = document.get("yorum") as? String{
-                            self.yorumDizisi.append(yorum)
-                        }
-                        if let email = document.get("email") as? String{
-                            self.emailDizisi.append(email)
+                            if let yorum = document.get("yorum") as? String{
+                                if let email = document.get("email") as? String{
+                                    let post = Post(email: email, yorum: yorum, gorsel: gorselUrl)
+                                    self.postDizisi.append(post)
+                                }
+                            }
                         }
                     }
                     self.tableView.reloadData()
@@ -57,14 +52,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return emailDizisi.count
+        return postDizisi.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FeedTableViewCell
-        cell.emailText.text = emailDizisi[indexPath.row]
-        cell.yorumText.text = yorumDizisi[indexPath.row]
-        cell.postImageView.sd_setImage(with: URL(string: self.gorselDizisi[indexPath.row]))
+        cell.emailText.text = postDizisi[indexPath.row].email
+        cell.yorumText.text = postDizisi[indexPath.row].yorum
+        cell.postImageView.sd_setImage(with: URL(string: self.postDizisi[indexPath.row].gorsel))
         return cell
     }
     

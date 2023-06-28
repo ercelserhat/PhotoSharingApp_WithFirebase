@@ -30,6 +30,7 @@
 		7A1199912A49D4D7001F19A5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1199902A49D4D7001F19A5 /* SettingsViewController.swift */; };
 		7A216CD02A4B3C33006CCC94 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A216CCF2A4B3C33006CCC94 /* FeedTableViewCell.swift */; };
 		7A216CF52A4C75AF006CCC94 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7A216CF42A4C75AF006CCC94 /* SDWebImage */; };
+		7A216CF72A4C7BCB006CCC94 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A216CF62A4C7BCB006CCC94 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7A11998E2A49D4C8001F19A5 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		7A1199902A49D4D7001F19A5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7A216CCF2A4B3C33006CCC94 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		7A216CF62A4C7BCB006CCC94 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				7A1199682A49C63B001F19A5 /* LaunchScreen.storyboard */,
 				7A11996B2A49C63B001F19A5 /* Info.plist */,
 				7A1199732A49C992001F19A5 /* GoogleService-Info.plist */,
+				7A216CF62A4C7BCB006CCC94 /* Post.swift */,
 			);
 			path = PhotoSharingApp_WithFirebase;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				7A1199622A49C63A001F19A5 /* ViewController.swift in Sources */,
 				7A11998F2A49D4C8001F19A5 /* UploadViewController.swift in Sources */,
 				7A216CD02A4B3C33006CCC94 /* FeedTableViewCell.swift in Sources */,
+				7A216CF72A4C7BCB006CCC94 /* Post.swift in Sources */,
 				7A11995E2A49C63A001F19A5 /* AppDelegate.swift in Sources */,
 				7A11998D2A49D4B8001F19A5 /* FeedViewController.swift in Sources */,
 				7A1199602A49C63A001F19A5 /* SceneDelegate.swift in Sources */,
