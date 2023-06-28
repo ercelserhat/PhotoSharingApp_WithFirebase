@@ -193,14 +193,75 @@
                     <view key="view" contentMode="scaleToFill" id="kf3-yr-1I0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YCn-J4-5hK">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="380" id="9Sd-T9-qqs" customClass="FeedTableViewCell" customModule="PhotoSharingApp_WithFirebase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="380"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Sd-T9-qqs" id="EjY-gJ-CvE">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="380"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qH-Pv-ejO">
+                                                    <rect key="frame" x="20" y="21" width="373" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mcd-9V-EH0">
+                                                    <rect key="frame" x="20" y="62" width="353" height="250"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="250" id="9Yi-F2-hcZ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanıcı Yorumu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjA-nz-sWg">
+                                                    <rect key="frame" x="20" y="332" width="353" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mcd-9V-EH0" firstAttribute="leading" secondItem="EjY-gJ-CvE" secondAttribute="leadingMargin" id="VAR-6U-bLF"/>
+                                                <constraint firstItem="jjA-nz-sWg" firstAttribute="top" secondItem="mcd-9V-EH0" secondAttribute="bottom" constant="20" id="Vgp-C7-1Tz"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mcd-9V-EH0" secondAttribute="trailing" id="ZB7-4C-8Yr"/>
+                                                <constraint firstItem="1qH-Pv-ejO" firstAttribute="leading" secondItem="EjY-gJ-CvE" secondAttribute="leadingMargin" id="ZVb-oB-pRf"/>
+                                                <constraint firstItem="1qH-Pv-ejO" firstAttribute="top" secondItem="EjY-gJ-CvE" secondAttribute="topMargin" constant="10" id="a7L-nS-bti"/>
+                                                <constraint firstItem="jjA-nz-sWg" firstAttribute="leading" secondItem="EjY-gJ-CvE" secondAttribute="leading" constant="20" id="hdW-gZ-HU3"/>
+                                                <constraint firstAttribute="trailing" secondItem="1qH-Pv-ejO" secondAttribute="trailing" id="ooZ-D4-TBt"/>
+                                                <constraint firstItem="mcd-9V-EH0" firstAttribute="top" secondItem="1qH-Pv-ejO" secondAttribute="bottom" constant="20" id="sgz-29-2Xe"/>
+                                                <constraint firstAttribute="trailing" secondItem="jjA-nz-sWg" secondAttribute="trailing" constant="20" id="uNq-lS-7nB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailText" destination="1qH-Pv-ejO" id="Rz0-Lq-HpH"/>
+                                            <outlet property="postImageView" destination="mcd-9V-EH0" id="dzh-Oq-i9l"/>
+                                            <outlet property="yorumText" destination="jjA-nz-sWg" id="a3R-7E-Nsm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="AEb-K3-Vvx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YCn-J4-5hK" firstAttribute="top" secondItem="AEb-K3-Vvx" secondAttribute="top" id="5xH-qP-0G1"/>
+                            <constraint firstItem="YCn-J4-5hK" firstAttribute="leading" secondItem="AEb-K3-Vvx" secondAttribute="leading" id="6xf-Ej-xLC"/>
+                            <constraint firstItem="AEb-K3-Vvx" firstAttribute="trailing" secondItem="YCn-J4-5hK" secondAttribute="trailing" id="Bqj-FY-lhg"/>
+                            <constraint firstItem="AEb-K3-Vvx" firstAttribute="bottom" secondItem="YCn-J4-5hK" secondAttribute="bottom" id="do3-ny-HdW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="house" catalog="system" id="i4M-qr-OJS"/>
+                    <connections>
+                        <outlet property="tableView" destination="YCn-J4-5hK" id="Tph-st-bs0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XdI-tx-X1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="-443"/>
+            <point key="canvasLocation" x="1203.8167938931297" y="-443.66197183098592"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fi4-7H-PI7">
