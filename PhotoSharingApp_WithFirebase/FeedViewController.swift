@@ -28,7 +28,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func firebaseVerileriAl(){
         let firestoreDatabase = Firestore.firestore()
-        firestoreDatabase.collection("Post").addSnapshotListener { snapShot, error in
+        //.whereField("email", isEqualTo: "asdf@gmail.com")
+        firestoreDatabase.collection("Post").order(by: "tarih", descending: true).addSnapshotListener { snapShot, error in
             if error != nil{
                 print(error?.localizedDescription)
             }else{
